@@ -14,6 +14,7 @@ min-height: 500px;
 
 .izquierda {
 width: 25%;
+padding-bottom: 13%;
 }
 
 .derecha {
@@ -21,18 +22,19 @@ width: 75%;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
-.filla:after {
+.fila:after {
 content: "";
 display: table;
 clear: both;
 }
 
 #c1 {
-    background-color:#aaa;
+    background-color: #211D8F;
+    color: white;
 }
 
 #c2 {
-    background-color:#bbb;
+    background-color:#77C8CF;
 }
 
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
@@ -63,3 +65,47 @@ img {
 }
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
+
+#foto_stitch {
+  width:300px;
+  height:auto ;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.definicion {
+  width: 350px;
+}
+
+#amigos-txt{
+  width:60%;
+  min-height:0px;
+  padding-top: 0%;
+}
+
+#amigos-imagenes{
+  width:40%;
+  min-width: 0px;
+}
+
+#imagenes1 {
+  width: 50%;
+  min-width: 0;
+  padding-bottom: 20%;
+}
+#imagenes2 {
+  width: 50%;
+  min-width: 0;
+  padding-top: 20%;
+  padding-bottom: 5%;
+}
+
+#saludo{
+  text-align: center;
+  width:85%;
+  padding-top:1%;
+  padding-left: 15%;
+  padding-bottom:1%
+  
+}
