@@ -67,7 +67,7 @@ img {
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
 
 #foto_stitch {
-  width:300px;
+  width:100%;
   height:auto ;
   display: block;
   margin: 0 auto;
@@ -75,30 +75,24 @@ img {
 }
 
 .definicion {
-  width: 350px;
+  width: 100%;
 }
 
 #amigos-txt{
   width:60%;
-  min-height:0px;
-  padding-top: 0%;
 }
 
 #amigos-imagenes{
   width:40%;
-  min-width: 0px;
 }
 
 #imagenes1 {
   width: 50%;
-  min-width: 0;
-  padding-bottom: 20%;
+  min-width: 0;;
 }
 #imagenes2 {
   width: 50%;
   min-width: 0;
-  padding-top: 20%;
-  padding-bottom: 5%;
 }
 
 #saludo{
@@ -108,4 +102,11 @@ img {
   padding-left: 15%;
   padding-bottom:1%
   
+}
+
+#video{
+  padding-left: 20%; 
+  
+  padding-bottom: 2%;
+  background-color:#77C8CF;
 }
