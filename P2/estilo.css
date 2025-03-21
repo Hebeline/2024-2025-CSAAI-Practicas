@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #0000ff;
+    color: white;
+    padding: 20px;
+}
+
+#clave-container {
+    font-size: 2rem;
+    margin: 20px;
+    letter-spacing: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    display: inline-block;
+}
+
+#clave-container span {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.oculto {
+    color: white !important;
+    background-color: black !important;
+}
+
+.acierto {
+    color: #228B22 !important; /* Verde más oscuro */
+    font-weight: bold;
+    background-color: black !important;
+}
+
+#numeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    max-width: 300px;
+    margin: auto;
+}
+
+#numeros button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+#numeros button:nth-child(10) {
+    grid-column: 2;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+#start {
+    color: green;
+}
+
+#stop {
+    color: red;
+}
+
+#reset {
+    color: purple;
+}
+
+#contador {
+    font-size: 2rem;
+    color: white;
+    border: 2px solid white;
+    display: inline-block;
+}
+
+.ganaste #numeros button {
+    background-color: green !important;
+    color: black !important;
+}
+
+.perdiste #numeros button {
+    background-color: red !important;
+    color: black !important;
+}
+
