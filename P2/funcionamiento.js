@@ -27,6 +27,7 @@ function iniciarJuego() {
 
 function detenerJuego() {
     stopCrono();
+    iniciado = false;
 }
 
 function reiniciarJuego() {
