@@ -70,7 +70,7 @@ function verificarNumero(numero) {
             detenerJuego();
             setTimeout(function(){
             alert("¡Felicidades! Has adivinado la clave secreta.");
-        }, 1)
+        }, 1);
         }
 
         if (intentos === 0) {
@@ -81,7 +81,7 @@ function verificarNumero(numero) {
             alert("Has perdido. Se reiniciará el juego.");
             document.querySelector("#contador").innerHTML = "00:00:00";
             reiniciarJuego();
-        }, 2)
+        }, 2);
         }
     }
 }

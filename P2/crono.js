@@ -17,7 +17,7 @@ function startCrono() {
         }
         document.querySelector("#contador").innerHTML = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}:${milisegundos.toString().padStart(2,'0')}`;
 
-    }, 10)}
+    }, 10)};
 
 function stopCrono() {
     clearInterval(cronometro);
