@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  border: 2px solid blue;
+  background-color: black;
+}
+
+/* Botones debajo del canvas */
+.botones {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.botones button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: blue;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botones button:hover {
+  background-color: #63b3ed;
+}
+
+@media screen and (max-width: 650px) {
+  canvas {
+    width: 90%;
+  }
+}
+
+#nave,
+#marciano,
+#explosion {
+  display: none;
+}
