@@ -20,6 +20,7 @@ var enemigoY = 30;
 var enemigoAncho = 30;
 var enemigoAlto = 30;
 var puntuacion = 0;
+var mover = false;
 
 var teclaIzquierda = false;
 var teclaDerecha = false;
@@ -41,7 +42,7 @@ for (var n = 0; n < 3; n++ ) {
     var objeto = {x:sumador,y :sumador2, foto:marciano};
     enemigos.push(objeto);
   }
-};
+}
 
 document.addEventListener("keydown", function(event) {
   if (event.key === "ArrowLeft") {
@@ -75,20 +76,20 @@ document.addEventListener("keyup", function(event) {
 //Boton izquierdo
 botonIzquierdo.addEventListener("touchstart", function() {
   teclaIzquierda=true;
-})
+});
 
 botonIzquierdo.addEventListener("touchend", function(){
   teclaIzquierda=false;
-})
+});
 
 //Boton derecho
 botonDerecho.addEventListener("touchstart", function() {
   teclaDerecha=true;
-})
+});
 
 botonDerecho.addEventListener("touchend", function(){
   teclaDerecha=false;
-})
+});
 
 //Disparo
 
@@ -97,8 +98,8 @@ disparo1.addEventListener("touchstart", function() {
     x: jugadorX + jugadorAncho / 2 - 2,
     y: jugadorY
   };
-  disparos.push(nuevoDisparo1)
-})
+  disparos.push(nuevoDisparo1);
+});
 
 
 function dibujarJuego() {
@@ -122,8 +123,8 @@ if (teclaIzquierda) {
    for(var j=0; j< enemigos.length; j++){
      let enemigo = enemigos[j];
      ctx.drawImage(enemigo.foto,enemigo.x, enemigo.y);
-     var mover = true;
-   };
+     mover = true;
+   }
 
   if (mover){
     for(var h=0; h<enemigos.length; h++){
@@ -131,28 +132,28 @@ if (teclaIzquierda) {
       enemigo.x += cambio;
       enemigo.y += 0.10;
       if(enemigo.x== 550){
-        cambio = -1
+        cambio = -1;
       }
       if (enemigo.x==10){
-        cambio = 1
+        cambio = 1;
       }
     }
-  };
+  }
 
   //Eliminar enemigos
 
   for(var indice=0; indice<disparos.length; indice++){
     var bala = disparos[indice];
     for(let indice2=0; indice2<enemigos.length; indice2++){
-      let enemigo = enemigos[indice2]
+      let enemigo = enemigos[indice2];
       if (bala.x>enemigo.x && bala.x+3<enemigo.x+30 && bala.y>enemigo.y && bala.y+7<enemigo.y+30){
         enemigo.foto=explosion;
-        ctx.fillText(`SCORE:${puntuacion}`, 10, 20)
+        ctx.fillText(`SCORE:${puntuacion}`, 10, 20);
         puntuacion +=10;        
         disparos.splice(indice,1);
         setTimeout(function(){
           enemigos.splice(indice2,1);
-        },100)
+        },100);
         sonido_explosion.currentTime = 0;
         sonido_explosion.play();
       }
@@ -165,7 +166,7 @@ if (teclaIzquierda) {
   
   ctx.fillStyle= "white";
   ctx.font = "20px serif";
-  ctx.fillText(`SCORE:${puntuacion}`, 10, 20)
+  ctx.fillText(`SCORE:${puntuacion}`, 10, 20);
 
   // Dibujar disparos
   ctx.fillStyle = "white";
@@ -193,14 +194,14 @@ if (teclaIzquierda) {
       sonido_victoria.play();
       ganado = false;
     }
-  };
+  }
 
   for(let indice3= 0; indice3<enemigos.length; indice3++){
     let enemigo =enemigos[indice3];
     if(enemigo.y+30>jugadorY){
       ctx.font = "50px serif";
       ctx.fillStyle = "red";
-      ctx.fillText('GAME OVER', 100, 300)
+      ctx.fillText('GAME OVER', 100, 300);
       if(perdido){
       sonido_derrota.play();
       perdido = false;
