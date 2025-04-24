@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Memory </title>
+
+        <link rel="stylesheet" href="memory.css" />
+        <script src="game.js" defer></script>
+    </head>
+    <body>
+        <div class="eleccion">
+            <p>Elige las dimensiones de tu tablero</p>
+            <button id="dos">2x2</button>
+            <button id="cuatro">4x4</button>
+            <button id="seis">6x6</button>
+        </div>
+        <div class="game">
+            <div class="controles">
+                <button id="comenzar">Comenzar</button>
+                <button id="reiniciar">Reiniciar</button>
+
+                <div class="display">
+                    <div class="movimientos">0 movimientos</div>
+                    <div class="timer">tiempo: 0 sec</div>
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="tablero"></div>
+                <div class="win">¡Has Ganado!</div>
+            </div>
+        </div>
+    </body>
+</html>
