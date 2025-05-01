@@ -1,0 +1,44 @@
+canvas {
+    border: 1px solid white;
+    background-color: rgb(75, 184, 220);
+  }
+  
+  .controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;  
+  }
+  
+  button {
+    background: #141a47;
+    color: #FFF;
+    border-radius: 2px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: Fredoka;
+    font-size: 18pt;
+  }
+
+body {
+  padding-top: 7%;
+  background-color: blue;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.info {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.display {
+  color:white;
+  padding-left: 1%;
+}
