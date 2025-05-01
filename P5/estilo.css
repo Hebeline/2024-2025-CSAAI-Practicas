@@ -1,6 +1,7 @@
 canvas {
     border: 1px solid white;
     background-color: rgb(75, 184, 220);
+    width : 80%;
   }
   
   .controls {
@@ -21,7 +22,7 @@ canvas {
   }
 
 body {
-  padding-top: 7%;
+  padding-top: 2%;
   background-color: blue;
   text-align: center;
   justify-content: center;
